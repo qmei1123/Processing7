@@ -1,15 +1,12 @@
-var col = {
-    r: 0,
-    g: 0,
-    b: 0,
-    a: 0
-};
+var lin = {
+    stroke: 0
+}
 
 var w = 20;
 
 function setup() {
     createCanvas(1000, 900);
-    frameRate(3);
+    frameRate(10);
 }
 
 function draw() {  
@@ -22,8 +19,13 @@ function draw() {
         strokeWeight(5);
         ellipse(x, y, w, w);
     }
-    
+    lin = line(mouseX, mouseY, mouseX, cos(mouseX));
+        lin.stroke(r, g, b);
 }
 
 }
 
+function roundFive(mouseX)
+{
+    return (mouseX % 5) >= 2.5 ? parseInt(mouseX / 5) * 5 + 5 : parseInt(mouseX / 5) * 5;
+}
