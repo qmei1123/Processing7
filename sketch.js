@@ -5,7 +5,7 @@ var lin = {
 var w = 20;
 
 function setup() {
-    createCanvas(1000, 900);
+    createCanvas(window.innerWidth, window.innerHeight);
     frameRate(10);
 }
 
